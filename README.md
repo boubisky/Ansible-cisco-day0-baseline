@@ -47,6 +47,7 @@ cisco-day0-ansible/
 - Ansible 2.12+
 - Python 3
 - `cisco.ios` collection
+- Create this folder once: mkdir rendered
 
 Install collection:
 
@@ -54,3 +55,4 @@ Install collection:
 ansible-galaxy collection install cisco.ios
 
 ---
+

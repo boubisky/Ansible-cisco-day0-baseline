@@ -1,0 +1,17 @@
+## This playbook:
+  # uses previously rendered configs
+  # pushes them to the devices
+
+- name: Deploy rendered Cisco configs
+  hosts: all
+  gather_facts: no
+
+  tasks:
+
+    - name: Push configuration to device
+      cisco.ios.ios_config:
+        src: "rendered/{{ inventory_hostname }}.cfg"
+
+    - name: Save running config
+      cisco.ios.ios_config:
+        save_when: modified

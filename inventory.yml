@@ -1,0 +1,31 @@
+
+---
+
+# 📄 inventory.yml
+
+```yaml
+all:
+  hosts:
+    dist-sw1:
+      ansible_host: 192.168.255.3
+      hostname: DIST-SW1
+      domain_name: lab.local
+      admin_user: netadmin
+      admin_secret: Cisco123!
+      enable_secret: Enable123!
+
+    dist-sw2:
+      ansible_host: 192.168.255.4
+      hostname: DIST-SW2
+      domain_name: lab.local
+      admin_user: netadmin
+      admin_secret: Cisco123!
+      enable_secret: Enable123!
+
+  vars:
+    ansible_connection: network_cli
+    ansible_network_os: cisco.ios.ios
+    ansible_user: netadmin
+    ansible_password: Cisco123!
+    ansible_become: yes
+    ansible_become_method: enable
